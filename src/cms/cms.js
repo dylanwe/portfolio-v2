@@ -1,5 +1,5 @@
 import CMS from 'netlify-cms-app'
 
-import BlogPostPreview from './preview-templates/BlogPostPreview'
+import markdownStyle from './../styles/markdown-body.css'
 
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
+CMS.registerPreviewStyle(markdownStyle);
