@@ -1,14 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
+import Layout from "../components/layout"
 
 const IndexPage = () => (
-  <main>
-    <h1>Homepage</h1>
-    <p>Welcome to my Gatsby site.</p>
-    <Link to="/projects">go projects</Link>
-    <br />
-    <Link to="/blog">go blog</Link>
-  </main>
+  <Layout location={"/"} contained={true}>
+    <div className="text-center mt-12">
+      <h1 className="text-3xl font-medium">Homepage</h1>
+      <p>Welcome to my Gatsby site.</p>
+    </div>
+  </Layout>
 )
 
 export default IndexPage

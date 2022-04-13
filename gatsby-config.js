@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Dylan Weijgertze`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Dylan Weijgertze`,
+      summary: `Solving problems with code`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A portfolio to showcase what I Can do`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      linkedIn: `https://www.linkedin.com/in/dylan-weijgertze`,
     },
   },
   plugins: [
@@ -138,6 +138,8 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    'gatsby-plugin-dark-mode',
+    'gatsby-plugin-postcss',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

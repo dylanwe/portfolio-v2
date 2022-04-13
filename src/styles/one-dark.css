@@ -68,19 +68,23 @@ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascr
 
 pre::-webkit-scrollbar 
 {
+  height: 8px;
   width: 14px;
+  border-radius: 50%;
 }
 
 pre::-webkit-scrollbar-track 
 {
+  height: 10px;
   background-color: var(--comment);
-  border-radius: 0px;
+  border-radius: 50%;
 }
 
 pre::-webkit-scrollbar-thumb 
 {
   background-color: var(--purple);
   border-radius: 0px;
+  border-radius: 10px;
 }
 
 /* Selection */
