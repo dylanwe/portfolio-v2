@@ -3,11 +3,11 @@ import { Link } from "gatsby"
 
 const Footer = () => {
   return (
-  <footer className="p-4 bg-gray-100 md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-900">
+  <footer className="p-4 bg-gray-100 md:flex md:items-center text-center md:justify-between md:p-6 dark:bg-gray-900">
     <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
         Dylan © {new Date().getFullYear()}, 🚀 Tailwind, Gatsby & Netlify
     </span>
-    <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+    <ul className="flex flex-wrap justify-center md:justify-end items-center mt-3 text-sm text-gray-500 dark:text-gray-400 md:mt-0">
       <li>
         <Link to="/">
             <span className="mr-4 hover:underline md:mr-6 ">
