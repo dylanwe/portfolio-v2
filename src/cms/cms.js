@@ -1,12 +1,12 @@
 import CMS from 'netlify-cms-app';
 // import PostPreview from './preview-templates/PostPreview';
-import cmsCSS from './../styles/cms.css'
-import codeHighlights from './../styles/one-dark.css'
+// import './../styles/cms.css'
+// import codeHighlights from './../styles/one-dark.css'
 
 CMS.init();
 
-CMS.registerPreviewStyle(cmsCSS.toString(), { raw: true });
-CMS.registerPreviewStyle(codeHighlights.toString(), { raw: true });
+CMS.registerPreviewStyle('./../styles/cms.css', { raw: true });
+CMS.registerPreviewStyle('./../styles/one-dark.css', { raw: true });
 
 // CMS.registerPreviewTemplate('blog', PostPreview)
 // CMS.registerPreviewTemplate('projects', PostPreview)
