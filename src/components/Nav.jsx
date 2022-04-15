@@ -8,7 +8,7 @@ const Nav = () => {
   return (
     <>
     <nav className="fixed bg-white top-0 z-50 w-full border-b-2 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 dark:border-gray-700">
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
+      <div className="max-w-6xl px-4 flex flex-wrap justify-between items-center mx-auto">
             <Link to="/">
                 <span className="flex items-center">
                     <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">

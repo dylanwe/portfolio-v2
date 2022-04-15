@@ -9,10 +9,7 @@ const Layout = ({ location, children, contained }) => {
   return (
     <div data-is-root-path={isRootPath}>
       <Nav />
-      <main className={`${(contained) ? "max-w-2xl mx-auto mt-12" : ""} px-4 prose dark:prose-invert`}>{children}</main>
-      <br />
-      <p>{contained}</p>
-      <br />
+        <main className={`${(contained) ? "max-w-6xl mx-auto mt-12" : ""} px-4`}>{children}</main>
       <Footer />
     </div>
   )

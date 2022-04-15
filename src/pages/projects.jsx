@@ -24,35 +24,33 @@ const ProjectIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle} contained={true}>
       <Seo title="All Projects" />
-
-      <ol style={{ listStyle: `none` }}>
+      <h1 className="text-3xl font-bold dark:text-gray-100">Projects</h1>
+      <ol style={{ listStyle: `none` }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr mt-4 mb-12">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
             <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
+              <Link to={post.fields.slug}>
+                <article
+                  className="border-2 border-gray-200 dark:border-gray-700 dark:hover:border-gray-500 dark:hover:bg-gray-700 p-4 rounded-lg hover:shadow-lg h-full transition-shadow dark:transition-colors"
+                  itemScope
+                  itemType="http://schema.org/Article"
+                >
+                  <header>
+                    <h2 className="mb-2 text-lg font-bold dark:text-gray-200">{title}</h2>
+                    <small className="bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400 px-3 py-2 rounded-md">{post.frontmatter.date}</small>
+                  </header>
+                  <section className="mt-2 text-gray-600 dark:text-gray-400">
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.description || post.excerpt,
+                      }}
+                      itemProp="description"
+                    />
+                  </section>
+                </article>
+              </Link>
             </li>
           )
         })}
