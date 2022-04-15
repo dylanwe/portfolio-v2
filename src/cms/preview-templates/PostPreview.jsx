@@ -1,13 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Post from '../../templates/Post'
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
   const tags = entry.getIn(['data', 'tags'])
   return (
-    <div>
-        <Post title={widgetFor('title')} date={widgetFor('date')} body={widgetFor('body')}/>
-    </div>
+    <article
+        className="prose dark:prose-invert"
+        itemScope
+        itemType="http://schema.org/Article"
+        >
+        <header className="text-center">
+          <p className="mb-2 text-gray-500 dark:text-gray-400">{date}</p>
+          <h1>{title}</h1>
+        </header>
+        <hr />
+        <section
+          dangerouslySetInnerHTML={body}
+          itemProp="articleBody"
+        />
+        <hr />
+      </article>
   )
 }
 
