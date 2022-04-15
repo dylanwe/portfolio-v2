@@ -1,9 +1,9 @@
 import CMS from 'netlify-cms-app';
 import PostPreview from './preview-templates/PostPreview';
-import globalCSS from './../styles/global.css'
+import cmsCSS from './../styles/cms.css'
 import codeHighlights from './../styles/one-dark.css'
 
-CMS.registerPreviewStyle(globalCSS.toString(), { raw: true });
+CMS.registerPreviewStyle(cmsCSS.toString(), { raw: true });
 CMS.registerPreviewStyle(codeHighlights.toString(), { raw: true });
 
 CMS.registerPreviewTemplate('blog', PostPreview)
