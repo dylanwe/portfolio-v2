@@ -3,6 +3,8 @@ import CMS from 'netlify-cms-app';
 import cmsCSS from './../styles/cms.css'
 import codeHighlights from './../styles/one-dark.css'
 
+CMS.init();
+
 CMS.registerPreviewStyle(cmsCSS.toString(), { raw: true });
 CMS.registerPreviewStyle(codeHighlights.toString(), { raw: true });
 
