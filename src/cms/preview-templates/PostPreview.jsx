@@ -3,7 +3,9 @@ import PropTypes from "prop-types"
 import Bio from "../../components/Bio"
 
 const PostPreview = ({ entry, widgetFor }) => {
-  const tags = entry.getIn(["data", "tags"])
+  const title = entry.getIn(['data', 'title']);
+  const date = entry.getIn(['data', 'date']);
+  
   return (
     <>
       <article
@@ -16,7 +18,7 @@ const PostPreview = ({ entry, widgetFor }) => {
           <h1>{title}</h1>
         </header>
         <hr />
-        <section dangerouslySetInnerHTML={body} itemProp="articleBody" />
+        <section dangerouslySetInnerHTML={widgetFor('body')} itemProp="articleBody" />
         <hr />
       </article>
       <Bio />
