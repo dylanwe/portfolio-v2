@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Post from '../../templates/Post'
+import "../../styles/global.css"
+import '../../src/styles/one-dark.css'
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
   const tags = entry.getIn(['data', 'tags'])
