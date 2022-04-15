@@ -2,7 +2,6 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/Layout"
-import Bio from "../components/Bio"
 import Seo from "../components/seo"
 
 const ProjectPostTemplate = ({ data, location }) => {
@@ -11,7 +10,7 @@ const ProjectPostTemplate = ({ data, location }) => {
 
   return (
     <>
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} pageType="post">
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}

@@ -10,7 +10,7 @@ const BlogIndex = ({ data, location }) => {
 
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle} contained={false}>
+      <Layout location={location} title={siteTitle} pageType="overview">
         <Seo title="All posts" />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -22,7 +22,7 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle} contained={true}>
+    <Layout location={location} title={siteTitle} pageType="overview">
       <Seo title="All posts" />
       <h1 className="text-3xl font-bold dark:text-gray-100">Blog</h1>
       <ol style={{ listStyle: `none` }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr mt-4 mb-12">
