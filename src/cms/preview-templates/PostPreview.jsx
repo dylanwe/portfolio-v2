@@ -5,7 +5,7 @@ import Bio from "../../components/Bio"
 const PostPreview = ({ entry, widgetFor }) => {
   const title = entry.getIn(['data', 'title']);
   const date = entry.getIn(['data', 'date']);
-  
+
   return (
     <>
       <article
@@ -18,7 +18,7 @@ const PostPreview = ({ entry, widgetFor }) => {
           <h1>{title}</h1>
         </header>
         <hr />
-        <section dangerouslySetInnerHTML={widgetFor('body')} itemProp="articleBody" />
+        <section>{widgetFor('body')}</section>
         <hr />
       </article>
       <Bio />
