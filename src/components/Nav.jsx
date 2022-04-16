@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import { StaticImage } from "gatsby-plugin-image"
 
 const Nav = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -10,11 +11,17 @@ const Nav = () => {
     <nav className="fixed bg-white top-0 z-50 w-full border-b-2 border-gray-200 py-2.5 rounded dark:bg-gray-800 dark:border-gray-700 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-90 dark:bg-opacity-90">
       <div className="max-w-6xl px-4 flex flex-wrap justify-between items-center mx-auto">
             <Link to="/">
-                <span className="flex items-center">
-                    <span className="self-center text-xl font-semibold whitespace-nowrap text-cyan-500 dark:text-cyan-400">
-                        Dylan
-                    </span>
-                </span>
+                <StaticImage
+                  layout="fixed"
+                  objectFit="cover"
+                  formats={["auto", "webp", "avif"]}
+                  src="../images/logo.svg"
+                  width={40}
+                  height={40}
+                  quality={95}
+                  objectPosition="50% 50%"
+                  alt="Profile picture"
+                />
             </Link>
         <div className="flex md:order-2 ">
           <ThemeToggler>
