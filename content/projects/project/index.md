@@ -1,28 +1,25 @@
 ---
 title: Screen-Time
-date: 2022-02-28T23:42:54.492Z
+date: 2022-04-16T12:45:39.028Z
 description: Screen-time is een website waar je informatie over films kunt
   bekijken, films kunt zoeken en informatie over nieuwe releases kunt zien.
 featuredpost: true
 featuredimage: https://blush-design.imgix.net/collections/croods/693c6d1d-030b-425f-a705-24a70586f166.png?w=800&auto=compress&cs=srgb
 ---
-Dit is een project van een schoolgroep en ik heb het developen ervan gedaan. Screen-time is een website waar je informatie over films kunt bekijken, films kunt zoeken en informatie over nieuwe releases kunt zien.
+This is a school group project and I did the development a bit. Screen-time is a website where can see information about movies, search movies, and see new releases.
 
 ![screen time photo](https://dylanwe.com/uploads/screen-time.png)
 
-## 🧑🏻‍💻 Hoe ik het heb gemaakt
+## 👨‍💻 How I made it
+The design was made by another student in Adobe XD, and he used a 12 column grid so converting it to a responsive site was pretty easy. The website was made with Bootstrap to get it nice and responsive for every device.
+  
+To get all the movie information I used [The Movie DB](https://www.themoviedb.org/) which is an API that can send information about movies and TV shows. The finder page is inspired by Tinder you can press X to continue looking for movies and if you see something interesting you can click on the eye to view more information. It was made with a simple randomizer in JavaScript
 
-Het ontwerp is gemaakt door een andere student in Adobe XD en hij gebruikte een raster met 12 kolommen, dus het converteren naar een responsieve site was vrij eenvoudig. De website is gemaakt met Bootstrap om het goed responsive te krijgen voor elk apparaat.
+## 👨‍🏫 What I learned
+It was the first time I learned to use an API. The documentation was great, so I can call new data with ease. 
 
-Om alle filminformatie te krijgen, heb ik The Movie DB gebruikt, een API die informatie over films en tv-programma's kan verzenden. De finderpage is geïnspireerd op Tinder, je kunt op X drukken om verder te zoeken naar films en als je iets interessants ziet kun je op het oog klikken om meer informatie te bekijken. Het is gemaakt met een eenvoudige randomizer in JavaScript
-
-## 🧑🏻‍🏫 Wat ik heb geleerd
-
-Het was de eerste keer dat ik leerde een API te gebruiken. De documentatie was geweldig, dus ik kan gemakkelijk nieuwe gegevens oproepen.
-
-## 📌 Wat ik de volgende keer anders zou doen
-
-Ik zou een fetch gebruiken om de API te krijgen en gegevens in een functie te schrijven die het gemakkelijker zou maken om ze opnieuw te gebruiken en ik hoef niet de hele tijd code te kopiëren, zoiets als dit:
+## 📌 What I would do differently
+I would use a fetch to get the API and write getting data into a function that would make it easier to reuse and I won't have to copy code all the time something like this:
 
 ```javascript
 function fetchMovie(url) {
@@ -32,4 +29,4 @@ function fetchMovie(url) {
 }
 ```
 
-Iets wat ik later ontdekte, was de Slick-Slider, waardoor het toevoegen van mooie responsieve sliders eenvoudig is. Ik heb ermee geëxperimenteerd en ik zou het zeker toevoegen om het bladeren door films en shows nog beter te maken.
+Something I later found out was [Slick slider](https://kenwheeler.github.io/slick/) which makes adding nice responsive sliders easy. I've experimented with it and I would definitely add it to make browsing movies and shows even better.
