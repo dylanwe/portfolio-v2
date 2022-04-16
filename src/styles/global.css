@@ -5,8 +5,12 @@
 @layer components {
     body {
         @apply bg-white;
+        overflow-x: hidden;
     }
     body.dark {
         @apply bg-gray-800;
+    }
+    .bg-radial-gradient {
+        background-image: radial-gradient(50% 50% at 50% 50%,#06B6D4 0,hsla(0,0%,100%,0) 100%);
     }
 }

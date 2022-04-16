@@ -30,7 +30,7 @@ const Footer = () => (
           </Link>
         </li>
         <li>
-          <a href="admin/#/" className="hover:underline">
+          <a href="/admin/#/" className="hover:underline">
             Admin
           </a>
         </li>

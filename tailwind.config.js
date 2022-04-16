@@ -4,7 +4,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'translateY(-10px) rotate(3deg)' },
+          '50%': { transform: 'translateY(0) rotate(-3deg)' },
+        }
+      }
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 }
