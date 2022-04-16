@@ -108,6 +108,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       featuredpost: Boolean
       featuredimage: String
+      tags: [Tag]
     }
 
     type Fields {
