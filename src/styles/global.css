@@ -5,6 +5,7 @@
 @layer components {
     html, body, #___gatsby {
         overflow-x: hidden;
+        position: relative;
     }
     body {
         @apply bg-white;
