@@ -15,6 +15,7 @@ const BlogPostTemplate = ({ data, location }) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        img={post.frontmatter.featuredimage}
       />
       <Post title={post.frontmatter.title} date={post.frontmatter.date} body={{ __html: post.html }}/>
     </Layout>
@@ -41,6 +42,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredimage
       }
     }
   }

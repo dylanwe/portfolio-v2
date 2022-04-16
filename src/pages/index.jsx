@@ -1,11 +1,14 @@
 import React from "react"
-import Nav from "../components/Nav"
-import Footer from "../components/Footer"
+import Seo from "../components/seo"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import Nav from "../components/Nav"
+import Footer from "../components/Footer"
+
 const IndexPage = () => (
   <>
+    <Seo title="Portfolio" />
     <Nav />
     <span class="absolute bg-radial-gradient opacity-[.15] pointer-events-none lg:inline-flex md:left-[-20vh] -top-24 w-[640px] h-[640px]"></span>
     <div className="mt-36 px-4 max-w-3xl mx-auto min-h-[calc(100vh-6rem)]">
