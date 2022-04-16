@@ -19,7 +19,7 @@ const Layout = ({ location, children, pageType }) => {
   return (
     <div data-is-root-path={isRootPath}>
       <Nav />
-        <main className={`${widthClass} px-4`}>{children}</main>
+        <main className={`${widthClass} px-4 min-h-[calc(100vh-6rem)]`}>{children}</main>
       <Footer />
     </div>
   )
