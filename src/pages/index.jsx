@@ -28,7 +28,7 @@ const IndexPage = () => (
             />
         </div>
         <h1 className="my-6 text-5xl font-bold dark:text-white">Hi 👋 I’m Dylan!</h1>
-        <p className="text-2xl font-bold text-gray-700 dark:text-gray-400">I’m a software engineer student at the <a className="text-gray-400 dark:text-gray-300 underline" href="https://www.hva.nl">Amsterdam University of Applied Sciences</a> and I enjoy programming and reading.</p>
+        <p className="text-2xl font-bold text-gray-700 dark:text-gray-400">I’m a software engineer student at the <a className="text-gray-400 dark:text-gray-300 underline" href="https://www.hva.nl" target="_blank">Amsterdam University of Applied Sciences</a> and I enjoy programming and reading.</p>
         <div className="mt-4">
           <Link to="/projects"><button className="bg-cyan-500 px-4 py-2 text-white rounded-lg hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-500 transition-colors">Projects</button></Link>
         </div>
@@ -38,18 +38,18 @@ const IndexPage = () => (
           <p>🌎 Speaks Dutch and English</p>
         </div>
         <div className="text-gray-800 border border-gray-200 dark:text-gray-400 dark:border-gray-600 rounded-lg p-4">
-          <p>💻 Prev. Web-developer intern @ <a href="https://www.otys.nl" className="underline font-medium text-gray-400 dark:text-gray-300">Otys</a></p>
+          <p>💻 Prev. Web-developer intern @ <a href="https://www.otys.nl" target="_blank" className="underline font-medium text-gray-400 dark:text-gray-300">Otys</a></p>
         </div>
         <div className="text-gray-800 border border-gray-200 dark:text-gray-400 dark:border-gray-600 rounded-lg p-4">
-          <p>🎓 Graduate Web designer @ <a href="https://www.glu.nl/opleiding/webdesign/" className="underline font-medium text-gray-400 dark:text-gray-300">GLU</a></p>
+          <p>🎓 Graduate Web designer @ <a href="https://www.glu.nl/opleiding/webdesign/" target="_blank" className="underline font-medium text-gray-400 dark:text-gray-300">GLU</a></p>
         </div>
         <div className="text-gray-800 border border-gray-200 dark:text-gray-400 dark:border-gray-600 rounded-lg p-4">
-          <p>👨‍💻 1st year Software Engineer @ <a href="https://www.hva.nl" className="underline font-medium text-gray-400 dark:text-gray-300">HVA</a></p>
+          <p>👨‍💻 1st year Software Engineer @ <a href="https://www.hva.nl" target="_blank" className="underline font-medium text-gray-400 dark:text-gray-300">HVA</a></p>
         </div>
       </main>
       <section className="my-12">
         <p className="text-gray-800 dark:text-gray-400">
-          You can find me on <a href="https://www.linkedin.com/in/dylan-weijgertze/" className="underline font-medium text-gray-400 dark:text-gray-300">LinkedIn</a> or have a look at my code on <a href="https://github.com/dylanwe" className="underline font-medium text-gray-400 dark:text-gray-300">Github</a>.
+          You can find me on <a href="https://www.linkedin.com/in/dylan-weijgertze/" target="_blank" className="underline font-medium text-gray-400 dark:text-gray-300">LinkedIn</a> or have a look at my code on <a href="https://github.com/dylanwe" target="_blank" className="underline font-medium text-gray-400 dark:text-gray-300">Github</a>.
         </p>
         
       </section>

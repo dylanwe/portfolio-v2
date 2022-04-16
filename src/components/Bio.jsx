@@ -21,7 +21,7 @@ const Bio = () => {
             </div>
             <div className="flex-1">
                 <h3 className="text-xl font-medium dark:text-white">Dylan Weijgertze</h3>
-                <p className="text-gray-600 dark:text-gray-300">A software engineer student with a passion for solving problems with code. Check me out on <a href="https://www.linkedin.com/in/dylan-weijgertze/" className="underline font-medium dark:text-gray-50">LinkedIn</a> or have a look at my code on <a href="https://github.com/dylanwe" className="underline font-medium dark:text-gray-50">Github</a>.</p>
+                <p className="text-gray-600 dark:text-gray-300">A software engineer student with a passion for solving problems with code. Check me out on <a href="https://www.linkedin.com/in/dylan-weijgertze/" target="_blank" className="underline font-medium dark:text-gray-50">LinkedIn</a> or have a look at my code on <a href="https://github.com/dylanwe" target="_blank" className="underline font-medium dark:text-gray-50">Github</a>.</p>
             </div>
         </div>
     );
