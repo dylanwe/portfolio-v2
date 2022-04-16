@@ -6,7 +6,7 @@ module.exports = {
       summary: `Solving problems with code`,
     },
     description: `A portfolio to showcase what I Can do`,
-    ogImage: `${__dirname}/src/images/default-og-img.png`,
+    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       linkedIn: `https://www.linkedin.com/in/dylan-weijgertze`,
     },
