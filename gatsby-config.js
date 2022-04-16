@@ -5,7 +5,7 @@ module.exports = {
       name: `Dylan Weijgertze`,
       summary: `Solving problems with code`,
     },
-    description: `A portfolio to showcase what I Can do`,
+    description: `Hey welcome to my portfolio, I'm Dylan Weijgertze a software engineer`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       linkedIn: `https://www.linkedin.com/in/dylan-weijgertze`,
