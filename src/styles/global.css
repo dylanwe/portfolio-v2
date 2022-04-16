@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 @layer components {
+    html, body, #___gatsby {
+        overflow-x: hidden;
+    }
     body {
         @apply bg-white;
-        overflow-x: hidden;
     }
     body.dark {
         @apply bg-gray-800;
