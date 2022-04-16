@@ -32,7 +32,7 @@ const IndexPage = () => (
     </header>
       <main className="my-12 grid grid-cols-2 gap-4 auto-rows-fr">
         <div className="text-gray-800 border border-gray-200 dark:text-gray-400 dark:border-gray-600 rounded-lg p-4">
-          <p>🌎 Speaks Duth and English</p>
+          <p>🌎 Speaks Dutch and English</p>
         </div>
         <div className="text-gray-800 border border-gray-200 dark:text-gray-400 dark:border-gray-600 rounded-lg p-4">
           <p>💻 Prev. Web-developer intern @ <a href="https://www.otys.nl" className="underline font-medium text-gray-400 dark:text-gray-300">Otys</a></p>
