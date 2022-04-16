@@ -30,8 +30,8 @@ const Seo = ({ description, lang, meta, title, img }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  const ogImg =  img || site.siteMetadata.ogImg
-
+  const ogImg =  img || site.siteMetadata.ogImage
+  
   return (
     <Helmet
       htmlAttributes={{

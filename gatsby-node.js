@@ -85,6 +85,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type SiteSiteMetadata {
       author: Author
       siteUrl: String
+      ogImage: String
       social: Social
     }
 
