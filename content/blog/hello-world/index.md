@@ -23,7 +23,7 @@ Oh, and here's a great quote from this Wikipedia on
 
 You can also write code blocks here!
 
-```js
+```js:title=example-file.js
 const saltyDuckEgg = "chinese preserved food product"
 ```
 
