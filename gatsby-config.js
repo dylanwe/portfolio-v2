@@ -14,6 +14,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img`,
+        name: 'uploads',
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/projects`,
@@ -38,6 +45,9 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-relative-images-v2`,
+          },
           {
             resolve: 'gatsby-remark-code-titles',
             options: {
