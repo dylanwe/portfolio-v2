@@ -15,7 +15,7 @@ const BlogPostTemplate = ({ data, location }) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        img={post.frontmatter.featuredimage}
+        img={post.frontmatter.featuredimage.replace("static/", "")}
       />
       <Post title={post.frontmatter.title} date={post.frontmatter.date} body={{ __html: post.html }}/>
     </Layout>

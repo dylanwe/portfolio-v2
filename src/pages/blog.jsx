@@ -28,7 +28,7 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr mt-4 mb-12">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-          const featuredimage = post.frontmatter.featuredimage
+          const featuredimage = post.frontmatter.featuredimage.replace("static/", "")
 
           return (
             <li key={post.fields.slug}>
