@@ -28,13 +28,13 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr mt-4 mb-12">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-          const featuredimage = post.frontmatter.featuredimage.replace("static/", "")
+          const featuredimage = post.frontmatter.featuredimage?.replace("static/", "")
 
           return (
             <li key={post.fields.slug}>
               <Link to={post.fields.slug}>
                 <article
-                  className="dark:border-2 dark:border-gray-700 dark:hover:border-gray-500 dark:hover:bg-gray-700 p-4 rounded-lg hover:shadow-lg h-full transition-shadow dark:transition-colors"
+                  className="border-2 border-white dark:border-gray-700 dark:hover:border-gray-500 dark:hover:bg-gray-700 p-4 rounded-lg hover:shadow-lg h-full transition-shadow dark:transition-colors"
                   itemScope
                   itemType="http://schema.org/Article"
                 >
