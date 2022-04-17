@@ -14,13 +14,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/static/img`,
-        name: 'uploads',
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/projects`,
