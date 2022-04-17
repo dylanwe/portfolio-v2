@@ -3,7 +3,7 @@ title: Portfolio v1
 date: 2022-04-17T13:30:58.514Z
 description: My first portfolio website made with PHP and my own CMS.
 featuredpost: true
-featuredimage: intrest-app-thumb.png
+featuredimage: /static/img/screentime-updated-thumb.png
 ---
 [💾 Check the repository](https://github.com/dylanwe/portfolio-v1)
 
