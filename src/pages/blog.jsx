@@ -12,11 +12,15 @@ const BlogIndex = ({ data, location }) => {
     return (
       <Layout location={location} title={siteTitle} pageType="overview">
         <Seo title="All posts" />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
+        <div className="text-center max-w-xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">No blog posts found</h2>
+          <div className="my-4" style={{
+            width: '100%',
+            height: '0',
+            paddingBottom: '77%',
+            position: 'relative'
+            }}><iframe src="https://giphy.com/embed/3oriff4xQ7Oq2TIgTu" width="100%" height="100%" style={{position: 'absolute'}} frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+        </div>
       </Layout>
     )
   }
