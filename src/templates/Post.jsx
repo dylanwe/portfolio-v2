@@ -2,6 +2,9 @@ import React from "react"
 import Bio from "./../components/Bio"
 
 const Post = ({ title, date, body }) => {
+  // add target="_blank" to all markdown links
+  body.__html = body.__html.replaceAll("a href", 'a target="_blank" href');
+
     return (
       <>
         <article
