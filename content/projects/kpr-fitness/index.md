@@ -1,6 +1,6 @@
 ---
 title: KPR fitness
-date: 2022-04-21T17:57:01.681Z
+date: 2021-08-01T17:57:01.681Z
 description: A PHP, MySQL real webshop for fitness programs
 featuredimage: /static/img/kpr-fitness-thumb.jpg
 ---
