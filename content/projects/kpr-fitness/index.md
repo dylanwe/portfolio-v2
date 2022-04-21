@@ -1,6 +1,6 @@
 ---
 title: KPR fitness
-date: 2021-08-01T17:57:01.681Z
+date: 2020-08-01T17:57:01.681Z
 description: A PHP, MySQL real webshop for fitness programs
 tags:
   - PHP
@@ -9,6 +9,7 @@ tags:
 featuredimage: /static/img/kpr-fitness-thumb.jpg
 ---
 
+[💾 Check the repository](https://github.com/dylanwe/kprfitness)
 
 **Used in this project**
 
