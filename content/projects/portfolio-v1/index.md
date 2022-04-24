@@ -4,6 +4,7 @@ date: 2021-02-07T14:30:58.514Z
 description: My first portfolio website made with PHP and my own CMS.
 featuredpost: true
 featuredimage: /static/img/screentime-updated-thumb.png
+templateKey: project-post
 ---
 [💾 Check the repository](https://github.com/dylanwe/portfolio-v1)
 

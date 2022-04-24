@@ -4,6 +4,7 @@ date: 2021-07-13T18:45:28.306Z
 description: A Node.js bot that mails you when prices are at your desired price.
 featuredpost: true
 featuredimage: /static/img/moola.jpeg
+templateKey: project-post
 ---
 [💾 Check the repository](https://github.com/dylanwe/moola)
 

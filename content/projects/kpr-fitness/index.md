@@ -7,6 +7,7 @@ tags:
   - MySQL
   - Bootstrap
 featuredimage: /static/img/kpr-fitness-thumb.jpg
+templateKey: project-post
 ---
 
 [💾 Check the repository](https://github.com/dylanwe/kprfitness)

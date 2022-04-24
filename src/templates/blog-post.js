@@ -17,7 +17,7 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
         img={post.frontmatter.featuredimage?.replace("static/", "")}
       />
-      <Post title={post.frontmatter.title} date={post.frontmatter.date} body={{ __html: post.html }}/>
+      <Post title={post.frontmatter.title} date={post.frontmatter.date} body={{ __html: post.html }} tags={post.frontmatter.tags}/>
     </Layout>
     </>
   )
@@ -41,6 +41,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        tags
         description
         featuredimage
       }

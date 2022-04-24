@@ -4,6 +4,7 @@ date: 2020-09-12T12:45:39.028Z
 description: A HTML5, CSS3 & Javascript website to check information about movies.
 featuredpost: true
 featuredimage: https://blush-design.imgix.net/collections/croods/693c6d1d-030b-425f-a705-24a70586f166.png?w=800&auto=compress&cs=srgb
+templateKey: project-post
 ---
 This is a school group project and I did the development a bit. Screen-time is a website where can see information about movies, search movies, and see new releases.
 

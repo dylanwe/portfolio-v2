@@ -1,12 +1,12 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-// const { fmImagesToRelative } = require('gatsby-remark-relative-images-v2');
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const projectPost = path.resolve(`./src/templates/project-post.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -20,6 +20,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             fields {
               slug
+            }
+            frontmatter {
+              tags
+              templateKey
             }
           }
         }
@@ -44,8 +48,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (posts.length > 0) {
     posts.forEach((post) => {
       createPage({
-        path: post.fields.slug,
-        component: blogPost,
+        path: post.frontmatter.templateKey === "project-post" ? `/projects${post.fields.slug}` : `/blog${post.fields.slug}`,
+        component: post.frontmatter.templateKey === "project-post" ? projectPost : blogPost,
         context: {
           id: post.id,
         },
@@ -56,7 +60,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-  // fmImagesToRelative(node);
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
@@ -106,6 +109,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Frontmatter {
+      templateKey: String
       title: String
       description: String
       date: Date @dateformat
