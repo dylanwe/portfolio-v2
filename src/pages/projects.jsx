@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { kebabCase } from "lodash";
 
 import Layout from "../components/Layout"
 import Seo from "../components/seo"
@@ -28,7 +29,15 @@ const ProjectIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle} pageType="overview">
       <Seo title="All Projects" />
-      <h1 className="text-3xl font-bold dark:text-gray-100 px-4">Projects</h1>
+      <header className="flex justify-between items-end  px-4">
+        <h1 className="text-3xl font-bold dark:text-gray-100">Projects</h1>
+        <Link to="/tags/">
+          <span className="text-cyan-500 hover:text-cyan-600 transition-colors flex">
+            <svg className="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -3 24 24" width="24" fill="currentColor"><path d="M11.586 15.071L13 13.657l1.414 1.414 6.165-6.165 1.09-3.552-2.484-2.483-1.079.336-1.598-1.598L18.591.96a2 2 0 0 1 2.008.496l2.483 2.483a2 2 0 0 1 .498 2L22.345 9.97l-7.93 7.93-2.83-2.828zM14.236.75l2.482 2.483a2 2 0 0 1 .498 2l-1.235 4.028-7.93 7.931-7.78-7.778L8.17 1.516 12.227.254a2 2 0 0 1 2.008.496zM3.1 9.414l4.95 4.95 6.164-6.165 1.09-3.552-2.484-2.483-3.585 1.115L3.1 9.414zm7.424-2.475a1.5 1.5 0 1 1 2.121-2.121 1.5 1.5 0 0 1-2.12 2.121zm6.886 1.022l.782-2.878c.45.152.755.325.917.518a1.5 1.5 0 0 1-.185 2.113c-.29.244-.795.326-1.514.247z"></path></svg>
+            Search by #tags
+          </span>
+        </Link>
+      </header>
       <ol style={{ listStyle: `none` }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mb-12">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -60,7 +69,9 @@ const ProjectIndex = ({ data, location }) => {
                   <section className="mt-2 break-words">
                     {(post.frontmatter.tags && post.frontmatter.tags.length) ? post.frontmatter.tags.map(tag => {
                       return (
-                        <small className="inline-block text-xs mr-4 mb-2 bg-gray-50 text-gray-500 dark:bg-gray-700 dark:text-gray-400 p-2 rounded-lg">#{tag}</small>
+                        <Link to={`/tags/${kebabCase(tag)}/`}>
+                          <small className="inline-block text-xs mr-4 mb-2 bg-gray-50 text-gray-500 dark:bg-gray-700 dark:text-gray-400 hover:bg-gray-100 hover:dark:bg-slate-600 p-2 rounded-lg transition-colors">#{tag}</small>
+                        </Link>
                       );
                     }) : <></>}
                   </section>

@@ -110,6 +110,16 @@ const Nav = () => {
               </span>
               </Link>
             </li>
+            <li>
+            <Link to="/tags">
+              <span
+                href="#"
+                className="block py-2 text-gray-700 md:hover:bg-transparent md:border-0 hover:text-cyan-500 md:p-0 dark:text-gray-400 dark:hover:text-cyan-400 md:dark:hover:bg-transparent transition-colors"
+              >
+                Tags
+              </span>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

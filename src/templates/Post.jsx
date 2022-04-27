@@ -1,5 +1,7 @@
 import React from "react"
 import Bio from "./../components/Bio"
+import { kebabCase } from "lodash";
+import { Link } from "gatsby"
 
 const Post = ({ title, date, body, tags }) => {
   // add target="_blank" to all markdown links
@@ -18,7 +20,9 @@ const Post = ({ title, date, body, tags }) => {
           <div className="break-words">
           {(tags && tags.length) ? tags.map(tag => {
             return (
-              <small className="inline-block text-xs bg-cyan-100 text-cyan-700 dark:bg-cyan-900 dark:text-cyan-400 px-3 py-2 rounded-md mx-2 mb-2">{tag}</small>
+              <Link to={`/tags/${kebabCase(tag)}/`}>
+                <small className="inline-block text-xs bg-cyan-100 text-cyan-700 dark:bg-cyan-900 dark:text-cyan-400 px-3 py-2 rounded-md mx-2 mb-2">#{tag}</small>
+              </Link>
             );
           }) : <></>}
           </div>

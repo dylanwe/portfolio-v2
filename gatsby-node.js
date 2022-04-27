@@ -1,4 +1,5 @@
 const path = require(`path`)
+const _ = require('lodash')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -56,6 +57,34 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  // Tag pages:
+  let tags = []
+  // Iterate through each post, putting all found tags into `tags`
+  posts.forEach((post) => {
+    
+
+    if (post.frontmatter.tags) {
+      // console.log(post.frontmatter.tags);
+      tags = tags.concat(post.frontmatter.tags)
+    }
+  })
+  
+  // Eliminate duplicate tags
+  tags = _.uniq(tags)
+
+  // Make tag pages
+  tags.forEach((tag) => {
+    const tagPath = `/tags/${_.kebabCase(tag)}/`
+
+    createPage({
+      path: tagPath,
+      component: path.resolve(`src/templates/tags.jsx`),
+      context: {
+        tag,
+      },
+    })
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
