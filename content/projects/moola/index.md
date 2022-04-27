@@ -1,10 +1,12 @@
 ---
+templateKey: project-post
 title: Moola
 date: 2021-07-13T18:45:28.306Z
-description: A Node.js bot that mails you when prices are at your desired price.
+description: A bot that send an email when products are at your desired price.
+tags:
+  - Node.js
 featuredpost: true
 featuredimage: /static/img/moola.jpeg
-templateKey: project-post
 ---
 [💾 Check the repository](https://github.com/dylanwe/moola)
 
