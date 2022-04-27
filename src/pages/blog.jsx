@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { kebabCase } from "lodash";
 
 import Layout from "../components/Layout"
 import Seo from "../components/seo"
@@ -65,6 +66,15 @@ const BlogIndex = ({ data, location }) => {
                       itemProp="description"
                     />
                   </section>
+                  <section className="mt-2 break-words">
+                    {(post.frontmatter.tags && post.frontmatter.tags.length) ? post.frontmatter.tags.map(tag => {
+                      return (
+                        <Link to={`/tags/${kebabCase(tag)}/`}>
+                          <small className="inline-block text-xs mr-4 mb-2 bg-gray-50 text-gray-500 dark:bg-gray-700 dark:text-gray-400 hover:bg-gray-100 hover:dark:bg-slate-600 p-2 rounded-lg transition-colors">#{tag}</small>
+                        </Link>
+                      );
+                    }) : <></>}
+                  </section>
                 </article>
               </Link>
             </li>
@@ -95,6 +105,7 @@ export const pageQuery = graphql`
           title
           description
           featuredimage
+          tags
         }
       }
     }
