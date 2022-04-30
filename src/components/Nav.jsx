@@ -19,6 +19,7 @@ const Nav = () => {
                   width={40}
                   height={40}
                   quality={95}
+                  placeholder="blurred"
                   objectPosition="50% 50%"
                   alt="Profile picture"
                 />

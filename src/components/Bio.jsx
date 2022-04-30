@@ -15,6 +15,7 @@ const Bio = () => {
                 height={70}
                 quality={95}
                 objectPosition="50% 50%"
+                placeholder="blurred"
                 imgClassName="rounded-full border-2 border-gray-200 dark:border-gray-600"
                 alt="Profile picture"
             />
