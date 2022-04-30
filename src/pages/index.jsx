@@ -29,7 +29,7 @@ const IndexPage = () => (
             />
         </div>
         <h1 className="my-6 text-5xl font-bold dark:text-white">Hi <span className="inline-block animate-[wave_.5s_ease-in-out_2]">👋</span> I’m Dylan!</h1>
-        <p className="text-2xl font-bold text-gray-700 dark:text-gray-400">I’m a software engineer student at the <a className="text-gray-400 dark:text-gray-300 underline" href="https://www.hva.nl" rel="noreferrer" target="_blank">Amsterdam University of Applied Sciences</a> and I enjoy programming and reading.</p>
+        <p className="text-2xl font-bold text-gray-700 dark:text-gray-400">I'm a Software Engineer student at the <a className="text-gray-400 dark:text-gray-300 underline" href="https://www.hva.nl" rel="noreferrer" target="_blank">Amsterdam University of Applied Sciences</a> and I enjoy programming and reading.</p>
         <div className="mt-4">
           <Link to="/projects"><button className="bg-cyan-500 px-4 py-2 text-white rounded-lg hover:bg-cyan-600 dark:bg-cyan-600 dark:hover:bg-cyan-500 transition-colors">Projects</button></Link>
         </div>
