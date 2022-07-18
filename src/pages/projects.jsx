@@ -32,7 +32,7 @@ const ProjectIndex = ({ data, location }) => {
       <header className="flex justify-between items-end  px-4">
         <h1 className="text-3xl font-bold dark:text-gray-100">Projects</h1>
       </header>
-      <ol style={{ listStyle: `none` }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mb-12">
+      <ol style={{ listStyle: `none` }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mb-12">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
           const featuredimage = post.frontmatter.featuredimage?.replace("static/", "")
