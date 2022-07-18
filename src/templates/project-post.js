@@ -17,7 +17,7 @@ const ProjectPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
         img={post.frontmatter.featuredimage?.replace("static/", "")}
       />
-      <Post title={post.frontmatter.title} date={post.frontmatter.date} body={{ __html: post.html }} tags={post.frontmatter.tags}/>
+      <Post title={post.frontmatter.title} date={post.frontmatter.date} body={{ __html: post.html }} github={post.frontmatter.github} tags={post.frontmatter.tags}/>
     </Layout>
     </>
   )
@@ -44,6 +44,7 @@ export const pageQuery = graphql`
         tags
         description
         featuredimage
+        github
       }
     }
   }

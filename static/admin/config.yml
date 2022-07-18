@@ -25,7 +25,9 @@ collections:
       }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: "Draft", name: "draft", widget: "boolean", required: false, default: true }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Github repository', name: 'github', widget: 'string' }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean", required: false }
       - { label: "Featured Image", name: "featuredimage", widget: image, media_folder: /static/img  }

@@ -2,16 +2,15 @@
 templateKey: project-post
 title: KPR fitness
 date: 2020-08-01T17:57:01.681Z
+draft: true
 description: A PHP, MySQL real webshop for fitness programs
+github: https://github.com/dylanwe/kprfitness
 tags:
   - PHP
   - MySQL
   - Bootstrap
 featuredimage: /static/img/kpr-fitness-thumb.jpg
 ---
-
-[💾 Check the repository](https://github.com/dylanwe/kprfitness)
-
 KPR-fitness is a site where you can buy personal training, fitness and nutrition programs. This was the first site I made for a real client. Unfortunately the site I made is no longer in use but I had learned a lot from it and decided to share it anyway. This is a screenshot of the home page:
 
 ![kpr-fitness homepage](kprfitness.png)

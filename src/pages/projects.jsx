@@ -88,7 +88,13 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(filter: { fields: { collection: {eq: "projects"} } }, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: {
+        fields: {collection: {eq: "projects"}},
+        frontmatter: {draft: {eq: false}}
+      }
+      sort: {fields: [frontmatter___date], order: DESC}
+    ) {
       nodes {
         excerpt
         fields {
