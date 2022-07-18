@@ -9,22 +9,24 @@ const Nav = () => {
   return (
     <>
     <nav className="fixed bg-white top-0 z-50 w-full border-b-2 border-gray-200 py-2.5 rounded dark:bg-gray-800 dark:border-gray-700">
-      <div className="max-w-6xl px-4 flex flex-wrap justify-between items-center mx-auto">
-            <Link to="/">
-                <StaticImage
-                  layout="fixed"
-                  objectFit="cover"
-                  formats={["auto", "webp", "avif"]}
-                  src="../images/logo.svg"
-                  width={40}
-                  height={40}
-                  quality={95}
-                  placeholder="blurred"
-                  objectPosition="50% 50%"
-                  alt="Profile picture"
-                />
-            </Link>
-        <div className="flex md:order-2 ">
+      <div className="max-w-6xl px-4 flex flex-wrap justify-start items-center mx-auto">
+        <Link to="/">
+            <StaticImage
+              layout="fixed"
+              objectFit="cover"
+              formats={["auto", "webp", "avif"]}
+              src="../images/logo.svg"
+              width={40}
+              height={40}
+              quality={95}
+              placeholder="blurred"
+              objectPosition="50% 50%"
+              alt="Profile picture"
+            />
+        </Link>
+
+        {/* Theme toggle and hamburger  */}
+        <div className="flex flex-1 justify-end md:order-2">
           <ThemeToggler>
             {({ theme, toggleTheme }) => (
               <button onClick={() => (theme === "dark") ? toggleTheme("light") : toggleTheme("dark")} className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-colors">
@@ -45,7 +47,7 @@ const Nav = () => {
             onClick={() => setNavIsOpen(!navIsOpen)}
             data-collapse-toggle="mobile-menu-4"
             type="button"
-            className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-colors"
+            className="inline-flex ml-4 items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-colors"
             aria-controls="mobile-menu-4"
             aria-expanded="false"
           >
@@ -76,8 +78,10 @@ const Nav = () => {
             </svg>
           </button>
         </div>
+
+        {/* menu items */}
         <div
-          className={`${(navIsOpen) ? "" : "hidden"} justify-between items-center w-full md:flex md:w-auto md:order-1"
+          className={`${(navIsOpen) ? "" : "hidden"} justify-between items-center w-full mx-0 md:mx-8 md:flex md:w-auto md:order-1"
           id="mobile-menu-4`}
         >
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
@@ -98,26 +102,6 @@ const Nav = () => {
                 className="block py-2 text-gray-700 md:hover:bg-transparent md:border-0 hover:text-cyan-500 md:p-0 dark:text-gray-400 dark:hover:text-cyan-400 md:dark:hover:bg-transparent transition-colors"
               >
                 Projects
-              </span>
-              </Link>
-            </li>
-            <li>
-            <Link to="/blog">
-              <span
-                href="#"
-                className="block py-2 text-gray-700 md:hover:bg-transparent md:border-0 hover:text-cyan-500 md:p-0 dark:text-gray-400 dark:hover:text-cyan-400 md:dark:hover:bg-transparent transition-colors"
-              >
-                Blog
-              </span>
-              </Link>
-            </li>
-            <li>
-            <Link to="/tags">
-              <span
-                href="#"
-                className="block py-2 text-gray-700 md:hover:bg-transparent md:border-0 hover:text-cyan-500 md:p-0 dark:text-gray-400 dark:hover:text-cyan-400 md:dark:hover:bg-transparent transition-colors"
-              >
-                Tags
               </span>
               </Link>
             </li>

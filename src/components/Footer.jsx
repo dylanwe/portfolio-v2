@@ -23,20 +23,6 @@ const Footer = () => (
           </Link>
         </li>
         <li>
-          <Link to="/blog">
-              <span className="mr-4 hover:underline md:mr-6 ">
-                  Blog
-              </span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/tags">
-              <span className="mr-4 hover:underline md:mr-6 ">
-                  Tags
-              </span>
-          </Link>
-        </li>
-        <li>
           <a href="/admin/#/" className="hover:underline">
             Admin
           </a>
