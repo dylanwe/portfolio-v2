@@ -11,7 +11,7 @@ tags:
   - MySQL
 featuredimage: /static/img/ho-wan-loi-thumb.png
 ---
-This is a website for the Chinese Indian restaurant "Ho wan loi". They wanted an online space to show their menu to the customers. I planned to work with someone else who would do the frontend but their schedule didn't allow for this leading me to also do the frontend of the project.
+This is a website for the Chinese Indian restaurant [Ho wan loi](https://restaurant-howanloi.nl/). They wanted an online space to show their menu to the customers. I planned to work with someone else who would do the frontend but their schedule didn't allow for this leading me to also do the frontend of the project.
 
 ![homepage](homepage-1-.png "homepage")
 
