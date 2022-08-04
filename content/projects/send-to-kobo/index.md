@@ -3,20 +3,23 @@ templateKey: project-post
 title: Send to Kobo
 date: 2022-08-04T06:58:32.701Z
 draft: false
-description: A website to send books to your Kobo ereader.
+description: A deployed website to send books to your Kobo ereader. The site is
+  deployed to Heroku so you can try it out
 github: https://github.com/dylanwe/send-to-kobo
 tags:
   - TypeScript
   - Node.js
 featuredimage: /static/img/send-to-kobo-thumbnail-1-.png
 ---
+You can find the deployed site here: <https://send2kobo.herokuapp.com/>. A quick note is that conversion from epub to kepub doesnt work on the hosted website because Heroku doesn't allow me to install other programs.
+
 ![preview of website](send-to-kobo-thumbnail-1-.png "send to kobo website")
 
 I like to read various things, but sending books to my Kobo e-readers is mostly done through cable. I came along a project on GitHub [repository](https://github.com/daniel-j/send2ereader) that is a website that you can reach on your e-reader and send books. I did however noticed that I couldn't send a .cbz format with the website, so I decided to download it and try to implement. An amazing feature about the site is that it converts .epubs(the most common ebook format) to .kepub(the native version of ebooks on Kobo).
 
 ## 🧑🏻‍💻 The code
 
-This wasn't my own codebase, so I had to look around for a while before I could wrap my head around it. A way to get more familiar with the code is refactoring, so I did piece by piece. I abstracted some files away and used an .ejs rendering engine for the pages. After a while, I added TypeScript to help me write clearer code and reduce guessing through type hints.
+This wasn't my own codebase, so I had to look around for a while before I could wrap my head around it. It is however great practice for when I get a job and have to learn a new codebase. A way to get more familiar with the code is refactoring, so I did piece by piece. I abstracted some files away and used an .ejs rendering engine for the pages. After a while, I added TypeScript to help me write clearer code and reduce guessing through type hints.
 
 After a while the code became more and more familiar which is nice and soon enough I made it my own.
 
