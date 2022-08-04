@@ -2,7 +2,7 @@
 templateKey: project-post
 title: Send to Kobo
 date: 2022-08-04T06:58:32.701Z
-draft: true
+draft: false
 description: A website to send books to your Kobo ereader.
 github: https://github.com/dylanwe/send-to-kobo
 tags:
