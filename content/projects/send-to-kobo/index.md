@@ -10,8 +10,6 @@ tags:
   - Node.js
 featuredimage: /static/img/send-to-kobo-thumbnail-1-.png
 ---
-
-
 ![preview of website](send-to-kobo-thumbnail-1-.png "send to kobo website")
 
 I like to read various things, but sending books to my Kobo e-readers is mostly done through cable. I came along a project on GitHub [repository](https://github.com/daniel-j/send2ereader) that is a website that you can reach on your e-reader and send books. I did however noticed that I couldn't send a .cbz format with the website, so I decided to download it and try to implement. An amazing feature about the site is that it converts .epubs(the most common ebook format) to .kepub(the native version of ebooks on Kobo).
@@ -28,8 +26,6 @@ To make it easier for others to refactor my code and knowing that fundamental th
 2. If the transformation from .epub to .kepub went alright.
 
 I also gave the frontend of the website a small redesign with Bootstrap to make the frontend more pleasing.
-
-
 
 Here you can see me recieving a book on my e-reader:
 
@@ -48,4 +44,4 @@ Here you can see me recieving a book on my e-reader:
 
 ## 📌 Things I would do differently
 
-The commits I made are quite the mess and sometimes all over. A part of these weird commits are because I had to push code to see changes to the CMS.
+On the receiving end requests are sent every 5 seconds to ensure the session is still active. I think reducing requests through a websocket would reduce the load on the server.
