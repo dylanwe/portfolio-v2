@@ -10,7 +10,7 @@ const PostPreview = ({ entry, widgetFor }) => {
   return (
     <>
       <article
-        className="prose dark:prose-invert"
+        className="prose md:prose-lg dark:prose-invert"
         itemScope
         itemType="http://schema.org/Article"
         style={{margin: "auto"}}

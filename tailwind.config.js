@@ -5,6 +5,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            a: {
+              color: 'rgb(6 182 212 / var(--tw-bg-opacity))',
+              '&:hover': {
+                color: '#2c5282',
+              },
+            },
+          },
+        },
+      },
       keyframes: {
         wiggle: {
           '0%, 100%': { transform: 'translateY(0) rotate(-3deg)' },
