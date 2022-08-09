@@ -1,81 +1,53 @@
 ---
 templateKey: project-post
-title: Portfolio v1
-date: 2021-02-07T14:30:58.514Z
+title: Portfolio
+date: 2022-04-18T13:30:58.514Z
 draft: false
-description: My first portfolio website made with PHP and my own CMS.
+description: The website that you're currently on right now.
 github: https://github.com/dylanwe/portfolio-v1
 tags:
-  - PHP
-  - MySQL
+  - React
+  - Gatsby
+  - Netlify
 featuredpost: true
-featuredimage: /static/img/screentime-updated-thumb.png
+featuredimage: /static/img/portfolio-v2-2.png
 ---
-[💾 Check the repository](https://github.com/dylanwe/portfolio-v1)
+After reading the book "Show your work" I got motivated to rebuild my portfolio to improve the place where I show my work. I had a few requirements for my portfolio:
 
-My first portfolio was inspired by Apple, Medium, Notion and GitHub. Most of these sites have some sort of article layout, I thought it would be useful to do something similar, so I can explain all of my projects.
+1. A **CMS**(Content Management System)
+2. Write content in **Markdown**
+3. **Code blocks**, to present code snippets
+4. **React**, to improve my web framework skills
+5. **Meta tag customization**, to make pages look more presentable when shared.
 
-In general, the website is quite simple, this is because the focus should be mainly on the text.
+With the CMS I want to have the ability to write file in Markdown because it's customizable. I already write notes in it with the tool [Obsidian](https://obsidian.md), meaning that it's easy to convert notes into my portfolio pages.
 
-## 📝 Typography
+I want to use React because I like the component-based structure. It's also really popular in the job market, and it will help me in the next year of my study where we will be getting web framework lessons.
 
-My chosen font is Inter. I chose Inter because a sans-serif font is easier to read and Inter is also good at a smaller size. The font is long in the x size making it easy to read. Inter also has built-in adjustments when text is next to each other to make it fit better, for example: 9x3 the x in this is different and is shown as a sum.
+Using meta tags allows me to write open graph tags that make my pages more appealing when shared online. It helps other sites like LinkedIn to get some data like an image, title, and description.
 
-I made most of the text gray instead of black to make it more comfortable to read. The headers are larger, black and slightly thicker than the normal text, this is to make the hierarchy even clearer in the text.
+## 🎨 The design
 
-## 🧑🏻‍💻 Code
+I wanted to keep the design simple, but make the text nice and readable. Tailwind has a great option called prose which makes this super easy. The website has a dark mode toggle to reduce eye strain.
 
-For this site I made my own CMS complete with a WYSIWYG editor to adjust the content of the projects. In my CMS I can add / remove projects, change the title / URL, edit the description, publish and feature. This is what the CMS looks like when editing a project:
+## 🧑🏻‍💻 The code
 
-![picture of the backend cms i use to edit projects](portfolio_cms.png)
+Having put all these requirements down, I came to the conclusion to use Gatsby.js with Netlify CMS and Tailwind for styling. With Gatsby I can write React with the benefit of SEO and markdown pages that will be converted into static HTML, CSS and JavaScript making the loading of the pages fast. Gastby also has the ease of adding in plugins for extra features.
 
-All these functions are done with Javascript, but especially PHP. During my internship at [Otys](https://www.otys.nl) I was able to learn a lot from the developers, such as making my own CMS and integrating [CKEditor](https://ckeditor.com). They also helped me get started with OOP(Object Oriented Programming) in PHP, an example of that is my Database class, for this I made a database object with methods and instance variables, so that everything that belongs to the database is also worded with Database addressed. An instance variable is something an object knows, and a method is something an object can do.
+I started out with the [Gatsby starter blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog) I experimented with it for quite a bit and then I got to work.
 
-```php
-class Database // <-- class name 
-{
-    private $host; // <-- instance variable
-    private $dbname; // <-- instance variable
-    private $username; // <-- instance variable
-    private $password; // <-- instance variable
-    private $dbConnection; // <-- instance variable
+The use of Tailwind to style my website might make the JSX look more cluttered, but it helps the design stay consistent and makes me have to think less about the design.
 
-    public function __construct() // <-- method
-    {
-        $this->host = 'hostname';
-        $this->dbname = 'dbname';
-        $this->username = 'username';
-        $this->password = 'password';
-    }
+I had a hard time with Netlify CMS because every customization I wanted on it needed to be published because it doesn't show locally, this is the reason for a lot of commits.
 
-    public function connect() // <-- method
-    {
-        $this->dbConnection = new PDO("mysql:host=$this->host;dbname=$this->dbname;charset=utf8","$this->username","$this->password");
-        return $this;
-    }
+The website is hosted for free on Netlify which is great as I'm a student and would rather spend that little cash on some food 😅. Netlify tracks the main branch on GitHub for updates and then deploys it to the server.
 
-    public function getPage(string $title) // <-- method
-    {
-        $db = $this->connect()->dbConnection;
-        $exe = $db->prepare("SELECT * FROM content WHERE title='$title';");
-        $exe->execute();
-        $table = $exe->fetchAll(PDO::FETCH_ASSOC);
-        return $table;
-    }
-}
-```
+## 🧑🏻‍🏫 Things I learned
 
-To keep the URLs neat, I used routing, something I learned during this period. With routing I describe what a URL looks like and what stands for what, "content.php?page=work processes" becomes with my routing "content/work processes" this is done through a .HTACCES file.
+* Gatsby
+* React components, props and state
+* Hosting on Netlify
 
-## 🧑🏻‍🏫 What I Learned
+## 📌 Things I would do differently
 
-* Rewrites and routing so I keep the URLs neat.
-* Using AJAX which allows me to save the content in my WYSIWYG editor without pressing a button.
-* Create fewer files by loading pages with the same layout on the same file.
-* Uploading files so that I no longer have to log in to the server to add an image.
-* Using Object Oriented Programming and MVC to better organize my code.
-* Make it more dynamic like the content pages that consist of database information.
-
-## 📌 What I would do differently:
-
-Although I have made a CMS it is not perfect. With my CMS I can't customize the Homepage because it's quite unique content and doesn't fall into a template. During my internship at Otys I found a way in which this could be done and it would be good if I built that into my next portfolio.
+The commits I made are quite the mess and sometimes all over. A part of these weird commits are because I had to push code to see changes to the CMS.
