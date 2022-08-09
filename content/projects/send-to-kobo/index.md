@@ -9,7 +9,7 @@ github: https://github.com/dylanwe/send-to-kobo
 tags:
   - TypeScript
   - Node.js
-featuredimage: /static/img/send-to-kobo-thumbnail-1-.png
+featuredimage: /static/img/send-to-kobo.png
 ---
 You can find the deployed site here: <https://send2kobo.herokuapp.com/>. A quick note is that conversion from epub to kepub doesnt work on the hosted website because Heroku doesn't allow me to install other programs.
 
