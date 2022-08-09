@@ -3,8 +3,8 @@ templateKey: project-post
 title: Portfolio
 date: 2022-04-18T13:30:58.514Z
 draft: false
-description: The website that you're currently on right now.
-github: https://github.com/dylanwe/portfolio-v1
+description: The portfolio site that you're currently on
+github: https://github.com/dylanwe/portfolio-v2
 tags:
   - React
   - Gatsby
@@ -12,6 +12,8 @@ tags:
 featuredpost: true
 featuredimage: /static/img/portfolio-v2-2.png
 ---
+![The portfolio site you're on right now.](portfolio-v2-2.png "Portfolio")
+
 After reading the book "Show your work" I got motivated to rebuild my portfolio to improve the place where I show my work. I had a few requirements for my portfolio:
 
 1. A **CMS**(Content Management System)
